@@ -1,0 +1,139 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  --gradient-secondary: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+  --grid-pattern: repeating-linear-gradient(
+    to right,
+    rgba(255, 255, 250, 0.05) 0px,
+    rgba(255, 255, 250, 0.05) 1px,
+    transparent 1px,
+    transparent 40px
+  );
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+  min-height: 100vh;
+  overflow-x: hidden;
+  position: relative;
+}
+
+code {
+  font-family: 'Fira Code', source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+/* Glassmorphism base */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+/* Grid background pattern */
+.bg-grid {
+  background-image: var(--grid-pattern);
+  background-size: 40px 40px;
+  opacity: 0.1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(45deg, #667eea, #764ba2);
+  border-radius: 4px;
+}
+
+/* Grid pattern for hero section */
+.bg-grid-pattern {
+  background-image: linear-gradient(to right, rgba(255,255,255,0.02) 1px, transparent 1px),
+                  linear-gradient(to bottom, rgba(255,255,255,0.02) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+/* Card styles */
+.card {
+  @apply bg-gray-900/50 rounded-xl p-6 backdrop-blur-sm border border-gray-800 hover:border-purple-500/30 transition-all duration-300;
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-purple-600 to-pink-600 rounded-lg font-medium transform transition-all hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 border border-gray-700 rounded-lg font-medium hover:bg-gray-800 transition-colors;
+}
+
+.btn-tab {
+  @apply px-3 py-2 rounded-md text-sm font-medium transition-all hover:bg-gray-800;
+}
+
+.btn-tab-active {
+  @apply bg-gray-800 text-white;
+}
+
+/* Level icon styles */
+.level-icon {
+  @apply w-12 h-12 rounded-lg flex items-center justify-center mb-4;
+}
+
+/* Feature list styles */
+.feature-list {
+  @apply space-y-2;
+}
+
+.feature-item {
+  @apply flex items-center text-sm text-gray-300;
+}
+
+.feature-bullet {
+  @apply w-1.5 h-1.5 bg-purple-400 rounded-full mr-2;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-500;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Common Link Styles */
+.link-underline {
+  @apply text-purple-400 font-medium flex items-center hover:translate-x-1 transition-transform;
+}
+
+/* Arrow icon for links and buttons */
+.arrow-icon {
+  @apply ml-2 inline-block transition-transform;
+}
+
+/* Note: To use the arrow icon with hover effect, add 'group' class to the parent element and use 'group-hover:translate-x-1' on the arrow */
