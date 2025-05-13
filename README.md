@@ -10,7 +10,9 @@ HAF is a comprehensive framework for exploring cellular automata across multiple
 
 ## Project Vision
 
-The Hyperdimensional Automata Framework was created by CrAigFineTuned to revolutionize our understanding of cellular automata and their relationship to emergence, complexity, and consciousness. By extending traditional cellular automata into higher dimensions and incorporating principles from quantum mechanics and information theory, HAF aims to bridge the gap between computational models and the fundamental nature of reality itself.
+First and foremost, I've primarily creatd this project to help me understand these concepts myself.
+
+The Hyperdimensional Automata Framework was created to revolutionize our understanding of cellular automata and their relationship to emergence, complexity, and consciousness. By extending traditional cellular automata into higher dimensions and incorporating principles from quantum mechanics and information theory, HAF aims to bridge the gap between computational models and the fundamental nature of reality itself.
 
 ## Overview
 
